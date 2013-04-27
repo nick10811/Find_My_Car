@@ -63,7 +63,28 @@
     
     return result;
 }
-
+-(NSMutableDictionary*)getID:(int)historyID{
+    FMDatabase *db = [self dbPreOpen];
+    FMResultSet *rs = [db executeQuery:@"SELECT * FROM History WHERE id=?", [NSNumber numberWithInt:historyID]];
+    NSMutableDictionary *detail = [[NSMutableDictionary alloc]init];
+    while ([rs next]) {
+        [detail setObject:[rs stringForColumn:@"date"] forKey:@"date"];
+        [detail setObject:[NSNumber numberWithDouble:[rs doubleForColumn:@"locate_latitude"]] forKey:@"latitude"];
+        [detail setObject:[NSNumber numberWithDouble:[rs doubleForColumn:@"locate_longitude"]] forKey:@"longitude"];
+        [detail setObject:[rs stringForColumn:@"note"] forKey:@"note"];
+    }
+    [db close];
+    
+    if ([detail count] == 0) {
+        [detail release];
+        detail = nil;
+    }
+    else{
+        [detail autorelease];
+    }
+    
+    return detail;
+}
 
 #pragma mark - private
 -(FMDatabase*)dbPreOpen {
