@@ -13,8 +13,6 @@
 		94303A5E17092CCF00877089 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94303A5D17092CCF00877089 /* CoreLocation.framework */; };
 		94303A641709378F00877089 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 94303A631709378F00877089 /* Location.m */; };
 		94303A68170980C900877089 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94303A67170980C900877089 /* CoreData.framework */; };
-		94303A6B1709837A00877089 /* CarContent.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 94303A691709837A00877089 /* CarContent.xcdatamodeld */; };
-		94303A6F170985B000877089 /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = 94303A6E170985B000877089 /* Car.m */; };
 		94330AC51720D30000BCB06A /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 94330ABC1720D30000BCB06A /* FMDatabase.m */; };
 		94330AC61720D30000BCB06A /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 94330ABE1720D30000BCB06A /* FMDatabaseAdditions.m */; };
 		94330AC71720D30000BCB06A /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 94330AC01720D30000BCB06A /* FMDatabasePool.m */; };
@@ -44,9 +42,6 @@
 		94303A621709378F00877089 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		94303A631709378F00877089 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 		94303A67170980C900877089 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		94303A6A1709837A00877089 /* CarContent.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CarContent.xcdatamodel; sourceTree = "<group>"; };
-		94303A6D170985B000877089 /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
-		94303A6E170985B000877089 /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
 		94330ABB1720D30000BCB06A /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		94330ABC1720D30000BCB06A /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
 		94330ABD1720D30000BCB06A /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
@@ -100,16 +95,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		94303A6C1709856500877089 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				94303A691709837A00877089 /* CarContent.xcdatamodeld */,
-				94303A6D170985B000877089 /* Car.h */,
-				94303A6E170985B000877089 /* Car.m */,
-			);
-			name = Data;
-			sourceTree = "<group>";
-		};
 		94330ABA1720D30000BCB06A /* FMDB */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,7 +151,6 @@
 				943B400916BEA3E300FE7428 /* AppDelegate.m */,
 				94816A4417071CA700CF74D8 /* MainTableViewController.h */,
 				94816A4517071CA700CF74D8 /* MainTableViewController.m */,
-				94303A6C1709856500877089 /* Data */,
 				94330ABA1720D30000BCB06A /* FMDB */,
 				943B400016BEA3E300FE7428 /* Supporting Files */,
 			);
@@ -268,8 +252,6 @@
 				94816A4617071CA700CF74D8 /* MainTableViewController.m in Sources */,
 				943D68B0170816EC00860C5E /* LastEvent.m in Sources */,
 				94303A641709378F00877089 /* Location.m in Sources */,
-				94303A6B1709837A00877089 /* CarContent.xcdatamodeld in Sources */,
-				94303A6F170985B000877089 /* Car.m in Sources */,
 				94905574170ACC4C005C9D0E /* AddInstance.m in Sources */,
 				943E949A170D668300F90BD8 /* History.m in Sources */,
 				94F9E637170DDF65005B4DA7 /* HistoryEntity.m in Sources */,
@@ -393,19 +375,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		94303A691709837A00877089 /* CarContent.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				94303A6A1709837A00877089 /* CarContent.xcdatamodel */,
-			);
-			currentVersion = 94303A6A1709837A00877089 /* CarContent.xcdatamodel */;
-			path = CarContent.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 943B3FEE16BEA3E300FE7428 /* Project object */;
 }
