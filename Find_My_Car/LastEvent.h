@@ -8,11 +8,9 @@
 
 #import <UIKit/UIKit.h>
 @class MainTableViewController;
-@class AppDelegate;
 @interface LastEvent : UIViewController <UITextFieldDelegate>{
     
     NSMutableArray* m_car;
-    AppDelegate * delegate;
     int index;
     IBOutlet UILabel *lastDate;
     IBOutlet UILabel *last_latitude;
