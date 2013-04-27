@@ -33,25 +33,6 @@
     // 如果有資料先清空
     [history_row removeAllObjects];
     
-    // 設定從Core Data框架中取出Beverage的Entity
-//    NSFetchRequest* request = [[NSFetchRequest alloc]init];
-//    NSEntityDescription *entity = [NSEntityDescription
-//                                   entityForName:@"Car"
-//                                   inManagedObjectContext:[his_delegate managedObjectContext]];
-//    [request setEntity:entity];
-//    NSError* error = nil;
-//    //執行存取的指令並且將資料載入returnObjs
-//    NSMutableArray* returnObjs = [[[his_delegate managedObjectContext]
-//                                   executeFetchRequest:request error:&error]mutableCopy];
-//    [request release]
-    
-//    // 將資料倒入表格的資料來源之中
-//    for (Car* currentCar in returnObjs) {
-//            [[history_row objectAtIndex:0]insertObject:currentCar atIndex:0];
-//        
-//    }
-//    [returnObjs release];
-    
     FMDatabase *db = [self dbPreOpen];
     FMResultSet *rs = [db executeQuery:@"SELECT id, date FROM History ORDER BY id DESC"];
     while ([rs next]) {
@@ -119,15 +100,6 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] init];
     }
-    //取得這筆資料地被管理物件
-//    Car* currentCar = [[history_row objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
-//    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-//    [dateFormatter setDateFormat:@"yyyy-MM-dd hh:mm"];
-////    cell.textLabel.text = [[menu objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
-//    cell.textLabel.text = [dateFormatter stringFromDate:currentCar.date];
-//    
-//   [dateFormatter release];
-//
     [[cell textLabel] setText:[history_row objectAtIndex:[indexPath row]]];
     
     return cell;
@@ -146,25 +118,6 @@
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    if (editingStyle == UITableViewCellEditingStyleDelete) {
-//        //取出被管理的該物件
-//        Car* carDelete = [[history_row objectAtIndex:indexPath.section]objectAtIndex:indexPath.row];
-//        [[his_delegate managedObjectContext] deleteObject:carDelete];
-//        
-//        NSError* error = nil;
-//        if(![[his_delegate managedObjectContext] save:&error]){
-//            NSLog(@"物件刪除失敗");
-//        }
-//        else{
-//            [[history_row objectAtIndex:indexPath.section] removeObjectAtIndex:indexPath.row];
-//            // Delete the row from the data source
-//            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-//        }
-//    
-//    }   
-//    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-//        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-//    }   
 }
 
 /*
@@ -187,7 +140,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    NSLog(@"/History/ section:%d, row:%d ", indexPath.section, indexPath.row);
+    NSLog(@"/History/ section:%d, row:%d ", indexPath.section, indexPath.row);
 //    Car* entity = [[history_row objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
 //    HistoryEntity *historyEntityController = [self.storyboard instantiateViewControllerWithIdentifier:@"HistoryEntity"];
 //    //將自己傳入

@@ -12,7 +12,6 @@
 		94303A591709210E00877089 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94303A581709210E00877089 /* MapKit.framework */; };
 		94303A5E17092CCF00877089 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94303A5D17092CCF00877089 /* CoreLocation.framework */; };
 		94303A641709378F00877089 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 94303A631709378F00877089 /* Location.m */; };
-		94303A68170980C900877089 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94303A67170980C900877089 /* CoreData.framework */; };
 		94330AC51720D30000BCB06A /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 94330ABC1720D30000BCB06A /* FMDatabase.m */; };
 		94330AC61720D30000BCB06A /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 94330ABE1720D30000BCB06A /* FMDatabaseAdditions.m */; };
 		94330AC71720D30000BCB06A /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 94330AC01720D30000BCB06A /* FMDatabasePool.m */; };
@@ -41,7 +40,6 @@
 		94303A5D17092CCF00877089 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		94303A621709378F00877089 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		94303A631709378F00877089 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
-		94303A67170980C900877089 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		94330ABB1720D30000BCB06A /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		94330ABC1720D30000BCB06A /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
 		94330ABD1720D30000BCB06A /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
@@ -83,7 +81,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				940AE6D01720D7F00081B1A8 /* libsqlite3.dylib in Frameworks */,
-				94303A68170980C900877089 /* CoreData.framework in Frameworks */,
 				94303A5E17092CCF00877089 /* CoreLocation.framework in Frameworks */,
 				94303A591709210E00877089 /* MapKit.framework in Frameworks */,
 				943B3FFA16BEA3E300FE7428 /* UIKit.framework in Frameworks */,
@@ -133,7 +130,6 @@
 			isa = PBXGroup;
 			children = (
 				940AE6CF1720D7F00081B1A8 /* libsqlite3.dylib */,
-				94303A67170980C900877089 /* CoreData.framework */,
 				94303A5D17092CCF00877089 /* CoreLocation.framework */,
 				94303A581709210E00877089 /* MapKit.framework */,
 				943B3FF916BEA3E300FE7428 /* UIKit.framework */,
