@@ -12,5 +12,7 @@
 -(void)insertHistoryWithDate:(NSString*)date andNote:(NSString*)note forLat:(NSNumber*)lat andLng:(NSNumber*)lng;
 -(NSMutableArray*)getHistoryDate;
 -(void)deleteHistoryById:(NSInteger)rowId;
--(NSMutableDictionary*)getID:(int)historyID;
+-(NSMutableDictionary*)getHistoryID:(int)historyID;
+-(NSMutableDictionary*)getLastEvent;
+-(void)updateLastEventWithID:(int)getLastEventID andNote:(NSString*)lastEventNote;
 @end

@@ -63,7 +63,7 @@
     
     return result;
 }
--(NSMutableDictionary*)getID:(int)historyID{
+-(NSMutableDictionary*)getHistoryID:(int)historyID{
     FMDatabase *db = [self dbPreOpen];
     FMResultSet *rs = [db executeQuery:@"SELECT * FROM History WHERE id=?", [NSNumber numberWithInt:historyID]];
     NSMutableDictionary *detail = [[NSMutableDictionary alloc]init];
@@ -84,6 +84,33 @@
     }
     
     return detail;
+}
+-(NSMutableDictionary*)getLastEvent{
+    NSMutableDictionary *lastEvent = [[NSMutableDictionary alloc] init];
+    
+    FMDatabase *db = [self dbPreOpen];
+    FMResultSet *rs = [db executeQuery:@"SELECT * FROM History WHERE date = (SELECT MAX(date) FROM History)"];
+    while ([rs next]) {
+        [lastEvent setObject:[NSNumber numberWithInt:[rs intForColumn:@"id"]] forKey:@"id"];
+        [lastEvent setObject:[rs stringForColumn:@"date"] forKey:@"date"];
+        [lastEvent setObject:[NSNumber numberWithDouble:[rs doubleForColumn:@"locate_latitude"]] forKey:@"latitude"];
+        [lastEvent setObject:[NSNumber numberWithDouble:[rs doubleForColumn:@"locate_longitude"]] forKey:@"longitude"];
+        [lastEvent setObject:[rs stringForColumn:@"note"] forKey:@"note"];
+    }
+    NSLog(@"[DB] getLastEventID = %@",[lastEvent objectForKey:@"id"]);
+    
+    if([lastEvent count] == 0){
+        [lastEvent release];
+        lastEvent = nil;
+    }
+    else{
+        [lastEvent autorelease];
+    }
+    return lastEvent;
+}
+-(void)updateLastEventWithID:(int)getLastEventID andNote:(NSString*)lastEventNote{
+    FMDatabase *db = [self dbPreOpen];
+    [db executeUpdate:@"UPDATE History SET note=? WHERE id=?",lastEventNote, [NSNumber numberWithInt:getLastEventID]];
 }
 
 #pragma mark - private
