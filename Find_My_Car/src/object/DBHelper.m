@@ -42,7 +42,7 @@
 -(NSMutableArray*)getHistoryDate {
     NSMutableArray *result = [[NSMutableArray alloc] init];
     FMDatabase *db = [self dbPreOpen];
-    FMResultSet *rs = [db executeQuery:@"SELECT id, date FROM History ORDER BY id DESC"];
+    FMResultSet *rs = [db executeQuery:@"SELECT id, date FROM History ORDER BY date DESC"];
     
     while ([rs next]) {
         HistoryData *data = [[HistoryData alloc] init];

@@ -35,9 +35,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    // Do any additional setup after loading the view.
     [m_mapView setShowsUserLocation:YES];
     [self locateMap];
-	// Do any additional setup after loading the view.
 }
 -(void)locateMap{
     // 初始化一個地理中心

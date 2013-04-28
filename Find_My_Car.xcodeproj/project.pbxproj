@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		940AE6D01720D7F00081B1A8 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 940AE6CF1720D7F00081B1A8 /* libsqlite3.dylib */; };
 		94167FE1172CABFF000E1744 /* FindMyCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 94167FE0172CABFF000E1744 /* FindMyCar.m */; };
+		94167FEA172CD0B0000E1744 /* Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 94167FE9172CD0B0000E1744 /* Annotation.m */; };
 		94303A591709210E00877089 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94303A581709210E00877089 /* MapKit.framework */; };
 		94303A5E17092CCF00877089 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94303A5D17092CCF00877089 /* CoreLocation.framework */; };
 		943B3FFA16BEA3E300FE7428 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 943B3FF916BEA3E300FE7428 /* UIKit.framework */; };
@@ -40,6 +41,8 @@
 		940AE6CF1720D7F00081B1A8 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		94167FDF172CABFF000E1744 /* FindMyCar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindMyCar.h; sourceTree = "<group>"; };
 		94167FE0172CABFF000E1744 /* FindMyCar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindMyCar.m; sourceTree = "<group>"; };
+		94167FE8172CD0B0000E1744 /* Annotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Annotation.h; sourceTree = "<group>"; };
+		94167FE9172CD0B0000E1744 /* Annotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Annotation.m; sourceTree = "<group>"; };
 		94303A581709210E00877089 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		94303A5D17092CCF00877089 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		943B3FF616BEA3E300FE7428 /* Find_My_Car.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Find_My_Car.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -182,6 +185,8 @@
 				AABAF04F172BC46C00FCECA0 /* DBHelper.m */,
 				AABAF07A172BCB5900FCECA0 /* HistoryData.h */,
 				AABAF07B172BCB5900FCECA0 /* HistoryData.m */,
+				94167FE8172CD0B0000E1744 /* Annotation.h */,
+				94167FE9172CD0B0000E1744 /* Annotation.m */,
 			);
 			path = object;
 			sourceTree = "<group>";
@@ -314,6 +319,7 @@
 				AABAF079172BC46C00FCECA0 /* MainTableViewController.m in Sources */,
 				AABAF07C172BCB5900FCECA0 /* HistoryData.m in Sources */,
 				94167FE1172CABFF000E1744 /* FindMyCar.m in Sources */,
+				94167FEA172CD0B0000E1744 /* Annotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

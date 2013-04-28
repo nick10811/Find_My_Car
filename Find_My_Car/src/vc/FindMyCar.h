@@ -13,6 +13,8 @@
 @interface FindMyCar : UIViewController<MKMapViewDelegate>{
     IBOutlet MKMapView *find_map;
     IBOutlet UILabel* loading;
+    MKMapRect m_originalRect;
+    CLLocationCoordinate2D userLocationNow;
 }
-
+-(void)locateMap;
 @end
