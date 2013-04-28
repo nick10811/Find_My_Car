@@ -35,19 +35,14 @@
     
     //menu
     NSString *item0 = @"Parking";
-    NSString *item1 = @"LastEvent";
-//    NSString *item1 = @"Note and Photo";
+    NSString *item1 = @"LastEvent"; //Note and Photo
     NSString *item2 = @"Find My Car";
 //    NSString *item3 = @"Timer";
     NSString *item4 = @"History";
 //    NSString *item5 = @"Setting";
     
     //create a block to store data of menu
-    NSMutableArray *block = [[NSMutableArray alloc] initWithObjects:item0, item1, item2, item4, nil];
-    //move block to table
-    menu = [[NSMutableArray alloc] initWithObjects:block, nil];
-    
-    [block release];
+    menu = [[NSMutableArray alloc] initWithObjects:item0, item1, item2, item4, nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -61,13 +56,13 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return [menu count];
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [[menu objectAtIndex:section] count];
+    return [menu count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -77,7 +72,7 @@
     
     // Configure the cell...
     // set text for each row of table
-    cell.textLabel.text = [[menu objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
+    cell.textLabel.text = [menu objectAtIndex:indexPath.row];
     return cell;
 }
 
@@ -85,9 +80,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"/MainTable/ touch on %d section and %d row", indexPath.section, indexPath.row);
+    NSLog(@"/MainTable/ touch on and %d row", indexPath.row);
 
-    if(indexPath.section == 0){
         if(indexPath.row == 0){
             Location *locate = [self.storyboard instantiateViewControllerWithIdentifier:@"Locate"];
             [self.navigationController pushViewController:locate animated:YES];
@@ -105,7 +99,6 @@
             [self.navigationController pushViewController:his animated:YES];
             
         }
-    }
 }
 
 @end

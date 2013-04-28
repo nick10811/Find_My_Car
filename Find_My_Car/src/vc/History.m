@@ -129,7 +129,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"/History/ section:%d, row:%d ", indexPath.section, indexPath.row);
+    NSLog(@"/History/ row:%d ", indexPath.row);
     
     /*
      1. new data obj
