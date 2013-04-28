@@ -43,13 +43,13 @@
     
     NSDate *date = [NSDate date];
     NSDateFormatter * dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"YYYY-MM-dd hh:mm:ss"];
+    [dateFormat setDateFormat:@"YYYY-MM-dd HH:mm:ss"];
     addDate.text = [dateFormat stringFromDate:date];
     
     addLatitude.text = latitude.stringValue;
     addLongitude.text = longitude.stringValue;
     
-    NSLog(@"test2: %@, %@", latitude.stringValue, longitude.stringValue);
+    NSLog(@"AddInstance viewDidLoad: %@, %@", latitude.stringValue, longitude.stringValue);
 }
 
 - (void)didReceiveMemoryWarning
