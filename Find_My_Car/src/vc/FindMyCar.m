@@ -35,9 +35,11 @@
     NSMutableDictionary *car = [db getLastEvent];
     NSLog(@"FindMyCar car location: %f, %f", [[car objectForKey:@"latitude"]doubleValue], [[car objectForKey:@"longitude"]doubleValue]);
     CLLocationCoordinate2D carLocation = CLLocationCoordinate2DMake([[car objectForKey:@"latitude"]doubleValue], [[car objectForKey:@"longitude"]doubleValue]);
-    Annotation *carAnnotation = [[Annotation alloc] initWithCoordinate:carLocation Title:@"Car"];
-    [find_map addAnnotation:carAnnotation];
-    [carAnnotation release];
+    if(car){
+        Annotation *carAnnotation = [[Annotation alloc] initWithCoordinate:carLocation Title:@"Car"];
+        [find_map addAnnotation:carAnnotation];
+        [carAnnotation release];
+    }
     
     //set car location to center
     center = carLocation;
