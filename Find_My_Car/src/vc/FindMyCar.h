@@ -14,7 +14,7 @@
     IBOutlet MKMapView *find_map;
     IBOutlet UILabel* loading;
     MKMapRect m_originalRect;
-    CLLocationCoordinate2D userLocationNow;
+    CLLocationCoordinate2D center;
 }
 -(void)locateMap;
 @end

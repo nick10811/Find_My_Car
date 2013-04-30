@@ -39,8 +39,10 @@
     [find_map addAnnotation:carAnnotation];
     [carAnnotation release];
     
+    //set car location to center
+    center = carLocation;
+
     [self locateMap];
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -62,8 +64,8 @@
     loading.alpha = 1;
 }
 -(void)locateMap{
-    // 將經緯度轉回地圖的點
-    MKMapPoint mapPoint = MKMapPointForCoordinate(userLocationNow);
+   // 將經緯度轉回地圖的點
+    MKMapPoint mapPoint = MKMapPointForCoordinate(center);
     // 將原始的地圖畫面的矩形紀錄下來
     m_originalRect = MKMapRectMake(mapPoint.x , mapPoint.y, 1000,1000);
     // 繪製地圖
@@ -76,10 +78,10 @@
 }
 -(void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation{
     // 取得使用者目前的位置
-    userLocationNow = userLocation.coordinate;
+//    center = userLocation.coordinate;
     // 繪製經緯度差各0.005的區域
     MKCoordinateSpan defaultSpan = MKCoordinateSpanMake(0.005, 0.005);
     // 以動畫方式移動至該區域
-    [find_map setRegion:MKCoordinateRegionMake(userLocationNow, defaultSpan) animated:YES];
+    [find_map setRegion:MKCoordinateRegionMake(center, defaultSpan) animated:YES];
 }
 @end
